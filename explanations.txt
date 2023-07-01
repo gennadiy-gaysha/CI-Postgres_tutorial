@@ -1,0 +1,37 @@
+1. PostgreSql settings form this video: https://youtu.be/ezjoDYs72GA
+
+2. Verify PostgreSQL Installation: Make sure PostgreSQL is installed on your system. If it is not installed, you need to download and install it before using the command-line tools.
+
+Check PATH Variable: Confirm that the PostgreSQL bin directory is added to the system's PATH variable. The bin directory typically contains the necessary executables, including 'psql'. To check if the bin directory is included in the PATH, follow these steps:
+
+Open a new Command Prompt or PowerShell window.
+Run the command: echo %PATH%
+Look for the directory path where PostgreSQL is installed (e.g., 'C:\Program Files\PostgreSQL\15\bin'). If it's not listed, you need to add it manually.
+Add PostgreSQL Bin Directory to PATH: If the PostgreSQL bin directory is missing from the PATH variable, you can add it by following these steps:
+
+Right-click on the 'This PC' or 'My Computer' icon on your desktop and select 'Properties'.
+In the System Properties window, click on the 'Advanced system settings' link on the left side.
+In the System Properties dialog, click the 'Environment Variables' button.
+In the Environment Variables window, find the 'Path' variable under the 'System variables' section and select it.
+Click the 'Edit' button.
+In the Edit Environment Variable window, click the 'New' button and enter the path to the PostgreSQL bin directory (e.g., 'C:\Program Files\PostgreSQL\15\bin').
+Click 'OK' to save the changes and close all the windows.
+Restart the Command Prompt or PowerShell: After making changes to the PATH variable, you need to restart the Command Prompt or PowerShell for the changes to take effect. Close any open command prompt or PowerShell windows and open a new one.
+
+Once you have completed these steps, try running the 'psql' command again. It should now be recognized, and the PostgreSQL command-line interface should launch successfully.
+
+3. Then I connected to PostgreSQL server using command:
+psql -U <username> -h localhost -p 5433 -d <database_name>:
+psql -U postgres -h localhost -p 5433 -d postgres
+
+
+
+
+4. How to change integrated default terminal in VS Code:
+- ctrl+shift+p
+- type in: select default profile
+- choose the desired terminal
+
+5. To quit Postres CLI: \q
+
+6.  \copy ...              perform SQL COPY with data stream to the client host
