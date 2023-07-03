@@ -23,6 +23,7 @@ Once you have completed these steps, try running the 'psql' command again. It sh
 3. Then I connected to PostgreSQL server using command:
 psql -U <username> -h localhost -p 5433 -d <database_name>:
 psql -U postgres -h localhost -p 5433 -d postgres
+psql -U postgres -h localhost -p 5433 -d chinook
 
 
 
@@ -35,3 +36,9 @@ psql -U postgres -h localhost -p 5433 -d postgres
 5. To quit Postres CLI: \q
 
 6.  \copy ...              perform SQL COPY with data stream to the client host
+
+7.
+$env:PGUSER="postgres"
+$env:PGHOST="localhost"
+$env:PGPORT="5433"
+$env:PGDATABASE="chinook"
