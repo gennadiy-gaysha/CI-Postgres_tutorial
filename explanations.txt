@@ -44,3 +44,6 @@ $env:PGPORT="5433"
 $env:PGDATABASE="chinook"
 By setting the SQLALCHEMY_SILENCE_UBER_WARNING environment variable to 1, you will silence the warning message related to SQLAlchemy:
 $env:SQLALCHEMY_SILENCE_UBER_WARNING="1"
+
+8. To create an empty file using PowerShell on Windows, you can use the following command:
+echo $null > "some_file.txt"
