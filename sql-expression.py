@@ -1,3 +1,5 @@
+# SQLAlchemy's Core Component.Focus on Tables
+
 # Table, Column, Float, ForeignKey, Integer, String, and MetaData are used to
 # define the structure of the database tables and columns.
 from sqlalchemy import (

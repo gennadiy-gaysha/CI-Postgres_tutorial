@@ -1,5 +1,6 @@
-import psycopg2
+# Helpful Python library
 
+import psycopg2
 
 # connect to "chinook" database
 connection = psycopg2.connect(database="chinook", password='123')
@@ -28,11 +29,11 @@ cursor = connection.cursor()
 # cursor.execute('select * from "Track" where "AlbumId" = %s', [5])
 # cursor.execute('select * from "Track" where "Composer" = %s', ["AC/DC"])
 # terminal: SELECT * FROM "Track" WHERE "Composer" = 'AC/DC';
-cursor.execute('select * from "Track" where "Composer" = %s', ["Test"])
+# cursor.execute('select * from "Track" where "Composer" = %s', ["Test"])
 
 
 # Query 7 - select only tracks with the length more than 2950000 sec.
-# cursor.execute('SELECT * FROM "Track" WHERE "Milliseconds" > 2950000')
+cursor.execute('SELECT * FROM "Track" WHERE "Milliseconds" > 2950000')
 
 # fetch the results (multiple)
 results = cursor.fetchall()

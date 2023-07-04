@@ -1,3 +1,5 @@
+# SQLAlchemy's full ORM - class-based models
+
 from sqlalchemy import (
     create_engine, Column, Integer, String, Float, ForeignKey
 )
