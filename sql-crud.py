@@ -101,11 +101,58 @@ gennadiy_gaysha = Programmer(
 # session.add(margaret_hamilton)
 # session.add(bill_gates)
 # session.add(tim_berners_lee)
-session.add(gennadiy_gaysha)
+# session.add(gennadiy_gaysha)
 # record_to_delete = session.query(Programmer).filter_by(id=4).first()
 # session.delete(record_to_delete)
 
 # commit our session to the database
+# session.commit()
+
+# updating a single record
+# programmer = session.query(Programmer).filter_by(id=7).first()
+# programmer.famous_for = "World President"
+# commit our session to the database
+# session.commit()
+
+# updating multiple records:
+# people = session.query(Programmer)
+# for person in people:
+#     if person.gender == "F":
+#         person.gender = "Female"
+#     elif person.gender == "M":
+#         person.gender = "Male"
+#     else:
+#         person.gender = "Gender not defined"
+#     session.commit()
+
+# deleting a single record:
+# fname = input("Enter a first name: ")
+# lname = input("Enter a last name: ")
+# programmer = session.query(Programmer).filter_by(
+#     first_name=fname, last_name=lname).first()
+# defensive programming:
+# if programmer is not None:
+#     print("Programmer found: " + programmer.first_name +
+#           " " + programmer.last_name)
+#     confirmation = input("Are you shure you want to delete the record? (y/n) ")
+#     if confirmation.lower() == "y":
+#         session.delete(programmer)
+#         session.commit()
+#         print("The record " + programmer.first_name +
+#               " " + programmer.last_name + " was succesfully deleted")
+#     else:
+#         print("The record " + programmer.first_name +
+#               " " + programmer.last_name + " was not deleted")
+# else:
+#     print("No records found")
+
+# delete multiple records:
+# programmers = session.query(Programmer)
+# for programmer in programmers:
+#     session.delete(programmer)
+#     session.commit()
+
+session.query(Programmer)
 session.commit()
 
 programmers = session.query(Programmer)

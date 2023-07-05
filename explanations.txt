@@ -47,3 +47,5 @@ $env:SQLALCHEMY_SILENCE_UBER_WARNING="1"
 
 8. To create an empty file using PowerShell on Windows, you can use the following command:
 echo $null > "some_file.txt"
+
+9. DROP TABLE IF EXISTS Programmer;
